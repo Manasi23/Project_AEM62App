@@ -13,17 +13,15 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<div class="page__main" data-sly-use.main="main.js">
-    <header class="page__header">
-        <div class="page__logo" data-sly-resource="logo"></div>
-        <nav class="page__topnav" data-sly-resource="topnav"></nav>
-    </header>
+<!doctype html>
+<html lang="en">
+    <head>
+        <sly data-sly-include="partials/head.html" data-sly-unwrap/>
+        <sly data-sly-include="partials/headlibs.html" data-sly-unwrap/>
+    </head>
+    <body>
+    	<sly data-sly-include="partials/footlibs.html" data-sly-unwrap/>
+        <sly data-sly-include="partials/main.html" data-sly-unwrap/>
 
-    <div class="page__title" data-sly-resource="${'title' @ decorationTagName='div'}"></div>
-    <div class="page__par" data-sly-resource="par"></div>
-
-    <footer class="page__footer">
-	<h1> MANASI </h1>
-        <p class="page__copyright">${"&copy; {0} AEM62App Site. All rights reserved." @ i18n, format=main.year, context='html'}</p>
-    </footer>
-</div>
+    </body>
+</html>
